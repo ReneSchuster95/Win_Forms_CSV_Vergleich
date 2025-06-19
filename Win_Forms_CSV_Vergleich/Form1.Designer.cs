@@ -50,9 +50,9 @@
             label_CSV1.AutoSize = true;
             label_CSV1.Location = new Point(12, 9);
             label_CSV1.Name = "label_CSV1";
-            label_CSV1.Size = new Size(77, 15);
+            label_CSV1.Size = new Size(91, 15);
             label_CSV1.TabIndex = 1;
-            label_CSV1.Text = "Aktuelle CSV:";
+            label_CSV1.Text = "Datenbank CSV:";
             // 
             // button_CSV1_Browse
             // 
@@ -79,9 +79,9 @@
             label_CSV2.AutoSize = true;
             label_CSV2.Location = new Point(12, 74);
             label_CSV2.Name = "label_CSV2";
-            label_CSV2.Size = new Size(77, 15);
+            label_CSV2.Size = new Size(74, 15);
             label_CSV2.TabIndex = 4;
-            label_CSV2.Text = "Aktuelle CSV:";
+            label_CSV2.Text = "Katalog CSV:";
             // 
             // textBox_CSV2
             // 
@@ -98,7 +98,7 @@
             button_Vergleich.TabIndex = 6;
             button_Vergleich.Text = "Vergleichen";
             button_Vergleich.UseVisualStyleBackColor = true;
-            button_Vergleich.Click += button_Vergleich_Click;
+            button_Vergleich.Click += button_Compare_Click;
             // 
             // openFileDialogFile
             // 

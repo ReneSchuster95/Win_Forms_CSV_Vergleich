@@ -1,6 +1,6 @@
 ﻿namespace Win_Forms_CSV_Vergleich
 {
-    partial class Vergleich_Form
+    partial class Compare_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -34,19 +34,13 @@
             dataGridView_Geandert = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridView_Geloescht = new DataGridView();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             label_Neu = new Label();
             label_aenderung = new Label();
-            label1 = new Label();
             button_Download_neu = new Button();
             button_Download_Geaendert = new Button();
-            button_Download_Geloescht = new Button();
             saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Neu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Geandert).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Geloescht).BeginInit();
             SuspendLayout();
             // 
             // dataGridView_Neu
@@ -111,37 +105,6 @@
             dataGridViewTextBoxColumn2.Resizable = DataGridViewTriState.False;
             dataGridViewTextBoxColumn2.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridView_Geloescht
-            // 
-            dataGridView_Geloescht.AllowUserToAddRows = false;
-            dataGridView_Geloescht.AllowUserToDeleteRows = false;
-            dataGridView_Geloescht.AllowUserToResizeRows = false;
-            dataGridView_Geloescht.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView_Geloescht.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_Geloescht.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
-            dataGridView_Geloescht.Location = new Point(12, 408);
-            dataGridView_Geloescht.Name = "dataGridView_Geloescht";
-            dataGridView_Geloescht.RowTemplate.Height = 25;
-            dataGridView_Geloescht.Size = new Size(776, 150);
-            dataGridView_Geloescht.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.FillWeight = 10F;
-            dataGridViewTextBoxColumn3.HeaderText = "ID";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            dataGridViewTextBoxColumn3.Resizable = DataGridViewTriState.False;
-            dataGridViewTextBoxColumn3.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "Bezeichnung";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            dataGridViewTextBoxColumn4.Resizable = DataGridViewTriState.False;
-            dataGridViewTextBoxColumn4.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
             // label_Neu
             // 
             label_Neu.AutoSize = true;
@@ -161,16 +124,6 @@
             label_aenderung.Size = new Size(128, 28);
             label_aenderung.TabIndex = 4;
             label_aenderung.Text = "Änderungen";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 377);
-            label1.Name = "label1";
-            label1.Size = new Size(179, 28);
-            label1.TabIndex = 5;
-            label1.Text = "Glöschte Einträge";
             // 
             // button_Download_neu
             // 
@@ -192,16 +145,6 @@
             button_Download_Geaendert.UseVisualStyleBackColor = true;
             button_Download_Geaendert.Click += button_Download_Geaendert_Click;
             // 
-            // button_Download_Geloescht
-            // 
-            button_Download_Geloescht.Location = new Point(794, 408);
-            button_Download_Geloescht.Name = "button_Download_Geloescht";
-            button_Download_Geloescht.Size = new Size(75, 150);
-            button_Download_Geloescht.TabIndex = 8;
-            button_Download_Geloescht.Text = "Speichern";
-            button_Download_Geloescht.UseVisualStyleBackColor = true;
-            button_Download_Geloescht.Click += button_Download_Geloescht_Click;
-            // 
             // saveFileDialog1
             // 
             saveFileDialog1.Filter = "CSV files (*.csv)|*.csv";
@@ -210,14 +153,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(880, 565);
-            Controls.Add(button_Download_Geloescht);
+            ClientSize = new Size(880, 385);
             Controls.Add(button_Download_Geaendert);
             Controls.Add(button_Download_neu);
-            Controls.Add(label1);
             Controls.Add(label_aenderung);
             Controls.Add(label_Neu);
-            Controls.Add(dataGridView_Geloescht);
             Controls.Add(dataGridView_Geandert);
             Controls.Add(dataGridView_Neu);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -226,7 +166,6 @@
             Text = "Vergleich_Form";
             ((System.ComponentModel.ISupportInitialize)dataGridView_Neu).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Geandert).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Geloescht).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -239,15 +178,10 @@
         private DataGridView dataGridView_Geandert;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridView dataGridView_Geloescht;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private Label label_Neu;
         private Label label_aenderung;
-        private Label label1;
         private Button button_Download_neu;
         private Button button_Download_Geaendert;
-        private Button button_Download_Geloescht;
         private SaveFileDialog saveFileDialog1;
     }
 }
